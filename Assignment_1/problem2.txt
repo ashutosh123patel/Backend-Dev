@@ -1,0 +1,43 @@
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (main)
+$ git branch feature
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (main)
+$ git checkout feature
+Switched to branch 'feature'
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (feature)
+$ touch feature.txt
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (feature)
+$ echo "Feature work" > feature.txt
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (feature)
+$ git add feature.txt
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (feature)
+$ git commit -m "Added the feature file"
+[feature ac765e5] Added the feature file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (feature)
+$ git status
+On branch feature
+nothing to commit, working tree clean
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (feature)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (main)
+$ git merge feature
+Updating 6e64a0a..ac765e5
+Fast-forward
+ feature.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (main)
+$ git branch -d feature
+Deleted branch feature (was ac765e5).

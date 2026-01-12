@@ -1,0 +1,41 @@
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (main)
+$ git clone https://github.com/aster123678/sample-repo.git
+Cloning into 'sample-repo'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (main)
+$ cd sample-repo
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/sample-repo (main)
+$ git checkout -b improvement
+Switched to a new branch 'improvement'
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/sample-repo (improvement)
+$ echo "Improvement done" >> README.md
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/sample-repo (improvement)
+$ git add README.md
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/sample-repo (improvement)
+$ git commit -m "Improved README"
+[improvement 7b2f9e3] Improved README
+ 1 file changed, 1 insertion(+)
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/sample-repo (improvement)
+$ git push origin improvement
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 428 bytes | 428.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/aster123678/sample-repo.git
+ * [new branch]      improvement -> improvement
+Branch 'improvement' set up to track remote branch 'improvement' from 'origin'.
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/sample-repo (improvement→origin/improvement)
+$

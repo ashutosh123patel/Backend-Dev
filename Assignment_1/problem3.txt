@@ -1,0 +1,62 @@
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (main)
+$ git checkout -b branch1
+Switched to a new branch 'branch1'
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (branch1)
+$ echo ".." > conflict.txt
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (branch1)
+$ git add conflict.txt
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (branch1)
+$ git commit -m "Branch1 change"
+[branch1 4a57721] Branch1 change
+ 1 file changed, 1 insertion(+)
+ create mode 100644 conflict.txt
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (branch1)
+$ git checkout main
+Switched to branch 'main'
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (main)
+$ git checkout -b branch2
+Switched to a new branch 'branch2'
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (branch2)
+$ echo "..2" > conflict.txt
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (branch2)
+$ git add conflict.txt
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (branch2)
+$ git commit -m "Branch2 change"
+[branch2 a5f07a6] Branch2 change
+ 1 file changed, 1 insertion(+)
+ create mode 100644 conflict.txt
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (branch2)
+$ git checkout main
+Switched to branch 'main'
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (main)
+$ git merge branch1
+Updating 0c0664a..4a57721
+Fast-forward
+ conflict.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (main)
+$ git merge branch2
+Auto-merging conflict.txt
+CONFLICT (add/add): Merge conflict in conflict.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (main)
+$ nano conflict.txt
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (main)
+$ git add conflict.txt
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (main)
+$ git commit -m "Resolved merge conflict"
+[main c8ea694] Resolved merge conflict

@@ -1,0 +1,66 @@
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (main)
+$ mkdir git-undo-practice
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (main)
+$ cd git-undo-practice
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/git-undo-practice (main)
+$ git init
+Initialized empty Git repository in /c/Users/ASHUTOSH/OneDrive/Desktop/Backend-Dev/git-undo-practice/.git/
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/git-undo-practice (main)
+$ git branch -M main
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/git-undo-practice (main)
+$ echo "Git Undo Practice" > README.md
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/git-undo-practice (main)
+$ git add README.md
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/git-undo-practice (main)
+$ git commit -m "Add README file"
+[main (root-commit) 48120c5] Add README file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/git-undo-practice (main)
+$ echo "Some new changes" >> README.md
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/git-undo-practice (main)
+$ git status
+On branch main
+Changes not staged for commit:
+        modified:   README.md
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/git-undo-practice (main)
+$ git diff
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/git-undo-practice (main)
+$ git add README.md
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/git-undo-practice (main)
+$ git restore --staged README.md
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/git-undo-practice (main)
+$ git add README.md
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/git-undo-practice (main)
+$ git commit -m "Wrong commit message"
+[main 4d7d08e] Wrong commit message
+ 1 file changed, 1 insertion(+)
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/git-undo-practice (main)
+$ git commit --amend -m "Updated README correctly"
+[main 5e91a2b] Updated README correctly
+ Date: Sun Jan 11 07:35:50 2026 +0000
+ 1 file changed, 1 insertion(+)
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/git-undo-practice (main)
+$ git log --oneline
+5e91a2b Updated README correctly
+48120c5 Add README file
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/git-undo-practice (main)
+$ git revert HEAD
+[main 8a72c1d] Revert "Updated README correctly"
+ 1 file changed, 1 deletion(-)

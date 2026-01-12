@@ -1,0 +1,69 @@
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (main)
+$ mkdir advanced-repo
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (main)
+$ cd advanced-repo
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main)
+$ git init
+Initialized empty Git repository in /c/Users/ASHUTOSH/OneDrive/Desktop/Backend-Dev/advanced-repo/.git/
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main)
+$ touch app.js notes.txt
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main)
+$ git add .
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main)
+$ git commit -m "Initial project files"
+[main (root-commit) e8f1234] Initial project files
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 app.js
+ create mode 100644 notes.txt
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main)
+$ touch .gitignore
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main)
+$ echo notes.txt > .gitignore
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main)
+$ git add .gitignore
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main)
+$ git commit -m "Added gitignore"
+[main f9a5678] Added gitignore
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main)
+$ echo "Work in progress" >> app.js
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main)
+$ git stash
+Saved working directory and index state WIP on main: f9a5678 Added gitignore
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main)
+$ git stash list
+stash@{0}: WIP on main: f9a5678 Added gitignore
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main)
+$ git stash apply
+On branch main
+Changes not staged for commit:
+  modified:   app.js
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main)
+$ git add app.js
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main)
+$ git commit -m "Completed feature"
+[main 2b3c9d1] Completed feature
+ 1 file changed, 1 insertion(+)
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main)
+$ git tag v1.0
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main)
+$ git tag
+v1.0

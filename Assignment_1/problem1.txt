@@ -1,0 +1,62 @@
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (main)
+$ git checkout -b unix-commands-git-github
+Switched to a new branch 'unix-commands-git-github'
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (unix-commands-git-github)
+$ mkdir Assignment_1
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev (unix-commands-git-github)
+$ cd Assignment_1
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/Assignment_1 (unix-commands-git-github)
+$ mkdir git-practice
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/Assignment_1 (unix-commands-git-github)
+$ cd git-practice
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/Assignment_1/git-practice (unix-commands-git-github)
+$ git init
+Initialized empty Git repository in /c/Users/ASHUTOSH/OneDrive/Desktop/Backend-Dev/Assignment_1/git-practice/.git/
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/Assignment_1/git-practice (master)
+$ touch README.md
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/Assignment_1/git-practice (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/Assignment_1/git-practice (master)
+$ git add README.md
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/Assignment_1/git-practice (master)
+$ git commit -m "Initial commit with README"
+[master (root-commit) a1b2c3d] Initial commit with README
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/Assignment_1/git-practice (master)
+$ echo "Git practice repository" >> README.md
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/Assignment_1/git-practice (master)
+$ git add README.md
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/Assignment_1/git-practice (master)
+$ git commit -m "Updated README file"
+[master b4c5d6e] Updated README file
+ 1 file changed, 1 insertion(+)
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/Assignment_1/git-practice (master)
+$ git log
+commit b4c5d6e
+Author: ASHUTOSH
+Message: Updated README file
+
+commit a1b2c3d
+Author: ASHUTOSH
+Message: Initial commit with README

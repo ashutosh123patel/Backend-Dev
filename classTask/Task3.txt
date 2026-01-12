@@ -1,0 +1,66 @@
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main)
+$ git checkout main
+Already on 'main'
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main)
+$ git checkout -b feature-ui
+Switched to a new branch 'feature-ui'
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (feature-ui)
+$ echo "UI version from feature branch" > ui.txt
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (feature-ui)
+$ git add ui.txt
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (feature-ui)
+$ git commit -m "UI update from feature-ui branch"
+[feature-ui 3d4e7f2] UI update from feature-ui branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 ui.txt
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (feature-ui)
+$ git checkout main
+Switched to branch 'main'
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main)
+$ echo "UI version from main branch" > ui.txt
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main)
+$ git add ui.txt
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main)
+$ git commit -m "UI update from main branch"
+[main 5a6b8c9] UI update from main branch
+ 1 file changed, 1 deletion(-), 1 insertion(+)
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main)
+$ git merge feature-ui
+Auto-merging ui.txt
+CONFLICT (add/add): Merge conflict in ui.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main|MERGING)
+$ cat ui.txt
+<<<<<<< HEAD
+UI version from main branch
+=======
+UI version from feature branch
+>>>>>>> feature-ui
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main|MERGING)
+$ nano ui.txt
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main|MERGING)
+$ cat ui.txt
+UI version merged from main and feature branch
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main|MERGING)
+$ git add ui.txt
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main|MERGING)
+$ git commit -m "Resolved merge conflict in ui.txt"
+[main 7c9d2e1] Resolved merge conflict in ui.txt
+
+ASHUTOSH@LAPTOP-TT1IPAAQ MINGW64 ~/OneDrive/Desktop/Backend-Dev/advanced-repo (main)
+$ git branch -d feature-ui
+Deleted branch feature-ui (was 3d4e7f2).

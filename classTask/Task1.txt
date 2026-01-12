@@ -1,0 +1,17 @@
+# Unix Commands & Log Analysis
+
+## Situation
+You joined a company as a Software Intern. Your senior asks you to analyze application logs stored on a Linux server.
+
+## Tasks:
+- Navigate to /var/log/app.
+- List all files (including hidden) with readable sizes: **ls -lah**
+- Show the last 20 lines of error.log: **tail -n 20 error.log**
+- Search for the word “error” (case-insensitive) in all .log files: **grep -i "error" *.log**
+- Save the output to error_report.txt: **> error_report.txt**
+
+## Practice Execution:
+Created practice/var/log/app with sample logs (.hidden.log, app.log, error.log).
+- **ls -lah** showed files with sizes (4.0K error.log, hidden file visible).
+- **tail -n 20 error.log** displayed recent ERROR lines.
+- **grep -i error *.log > error_report.txt** found 27 matches (errors + hidden).
