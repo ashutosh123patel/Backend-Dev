@@ -1,0 +1,1 @@
+Log File Analysis Repor Total Lines   : 7 ERROR Count  : 2 WARNING Count: 2 INFO Count   : 3
