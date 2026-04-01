@@ -13,7 +13,7 @@ function userDetails(cb){
         console.log("user details")
         cb()
     },1000)
-}
+}   
 
 function password(cb){
 
