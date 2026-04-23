@@ -1,0 +1,8 @@
+{
+  "name": "high-traffic-ecommerce",
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  }
+}

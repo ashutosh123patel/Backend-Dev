@@ -1,0 +1,6 @@
+{
+  "alerts": {
+    "response_time": 2000,
+    "sms": true
+  }
+}

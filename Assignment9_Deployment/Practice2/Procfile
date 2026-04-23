@@ -1,0 +1,2 @@
+web: node practice_2_high_traffic_ecommerce.js
+worker: node queue_worker.js

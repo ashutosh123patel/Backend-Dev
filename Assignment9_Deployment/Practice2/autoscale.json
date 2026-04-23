@@ -1,0 +1,5 @@
+{
+  "min_dynos": 10,
+  "max_dynos": 500,
+  "target_response_time_ms": 200
+}

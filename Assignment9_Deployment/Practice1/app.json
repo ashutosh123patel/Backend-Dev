@@ -1,0 +1,8 @@
+{
+  "name": "multi-env-deployment",
+  "env": {
+    "NODE_ENV": {
+      "value": "development"
+    }
+  }
+}
